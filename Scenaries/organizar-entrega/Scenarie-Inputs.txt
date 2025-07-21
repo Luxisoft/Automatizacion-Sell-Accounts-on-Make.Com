@@ -1,4 +1,9 @@
 Add scenario inputs
 
-- id [number] [required]
-- messages [text] [required]
+- clave [text] [required]
+- email [text] [required]
+- phone_number [text] [required]
+- reference [text] [required]
+- end_date [date] [required]
+- cuenta_gpt [text] [required]
+- tipo_gpt [text] [required]
