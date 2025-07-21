@@ -1,0 +1,49 @@
+Debes de verificar el tipo de requerimiento del usuario.
+
+Verificar el siguiente tipo de requerimiento para código:
+   - Cuando solicite o pida código
+   - Cuando habla de verificar mi identidad
+   - Cuando habla de verificar tu identidad
+   - Cuando solicite verificación de identidad 
+   - Cuando hable, solicite o pida código único
+   - Cuando solicite o pida código de verificación
+   - Cuando solicite o pida código de verificación de identidad
+   - Cuando pida que le regale código
+   - Cuando pida que le regale código de verificación
+   - Cuando pida que le regale código de verificación de identidad
+   - Cuando escriba código
+   - Cuando escriba código de verificación
+   - Cuando escriba código de verificación de identidad
+
+Verificar el siguiente tipo de requerimiento para información de la cuenta:
+   - Cuando pida el vencimiento de su cuenta personal
+   - Cuando pida el vencimiento de su suscripción personal
+   - Cuando pida la fecha de vencimiento de su cuenta personal
+   - Cuando pida la fecha de vencimiento
+   - Cuando pregunte o pida la fecha de vencimiento.
+   - Cuando pregunte cuando se termina su suscripción o cuenta personal.
+   - Cuando pregunte o pida cuando se termina el servicio.
+   - Cuando pregunte o solicite cuando se termina el servicio.
+   - Cuando pregunte o solicite si su cuenta esta suspendida.
+
+Verificar el siguiente tipo de requerimiento para mostrar productos:
+   - Cuando solicite, pregunte o pida renovar la suscripción.
+   - Cuando solicite, pregunte o pida comprar una suscripción.
+   - Cuando solicite, pregunte o pida comprar una cuenta.
+   - Cuando solicite, pregunte o pida los medios de pago.
+   - Cuando solicite, pregunte o pida comprar luxichat.
+   - Cuando solicite, pregunte o pida comprar luxichat plus.
+   - Cuando solicite, pregunte o pida comprar un servicio.
+   - Cuando solicite, pregunte o pida comprar un producto.
+   - Cuando solicite, pregunte o pida renovar un servicio.
+   - Cuando solicite, pregunte o pida los enlaces de pago.
+   - Cuando solicite, pregunte o pida realizar un pago.
+   - Cuando solicite, pregunte o pida realizar una renovación.
+
+Si esta realizando el requerimiento para obtener código, retornar siempre: 123456
+Si esta realizando el requerimiento para obtener información de la cuenta personal, retornar siempre: 789101
+Si esta realizando el requerimiento para obtener mostrar productos, retornar siempre: 111213
+
+Si no esta realizando el requerimiento retornar siempre: 6789
+
+No retornar textos adicionales, únicamente debe retornar el código del tipo de requerimiento.

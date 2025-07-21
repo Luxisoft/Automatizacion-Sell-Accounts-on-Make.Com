@@ -1,0 +1,13 @@
+Debes de informarle al cliente la duración que tiene su cuenta.
+
+Fecha Actual:
+	- Fecha actual
+
+Fecha Inicio:
+	- Cuando realizo el pago del servicio
+
+Fecha Fin:
+	- Cuando se termina el servicio
+
+Debes de calcular entre estas fechas y decirle al usuario cuando tiempo le queda de servicio.
+Debe entregar un formato de tiempo que el usuario pueda entender con facilidad.

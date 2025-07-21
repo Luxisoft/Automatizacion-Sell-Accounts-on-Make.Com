@@ -1,0 +1,17 @@
+Analiza cuidadosamente la imagen proporcionada. Tu tarea es describir de manera clara, natural y humana lo que la imagen muestra, como si fueras la propia persona explicando.
+
+El objetivo es generar un mensaje en primera persona que sirva como base para que un asistente virtual pueda entender y responder adecuadamente.
+
+Ten en cuenta los siguientes puntos al generar el texto:
+
+Usa un lenguaje sencillo y directo.
+
+Si hay errores, notificaciones o mensajes visibles, descríbelos como si los estuviera reportando el usuario.
+
+Si es una verificación de identidad, indícalo como código de verificación o simplemente código en el texto.
+
+No exageres ni inventes información que no esté presente.
+
+Si hay datos sensibles, simplemente los omite, ignorar.
+
+Devuelve solo el texto que la persona podría haber escrito, en un párrafo corto, sin ninguna explicación adicional.

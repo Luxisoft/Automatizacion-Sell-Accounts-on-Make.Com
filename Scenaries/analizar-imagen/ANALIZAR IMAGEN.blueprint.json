@@ -1,0 +1,528 @@
+{
+    "name": "ANALIZAR IMAGEN",
+    "flow": [
+        {
+            "id": 1,
+            "module": "scenario-service:StartSubscenario",
+            "version": 2,
+            "parameters": {},
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150,
+                    "name": "RECIBIR PARAMETROS"
+                },
+                "restore": {},
+                "interface": [
+                    {
+                        "help": "",
+                        "name": "id",
+                        "type": "number",
+                        "label": "",
+                        "default": null,
+                        "required": true
+                    },
+                    {
+                        "help": "",
+                        "name": "imagen_media_id",
+                        "type": "text",
+                        "label": "",
+                        "default": "",
+                        "required": true,
+                        "multiline": false
+                    },
+                    {
+                        "help": "",
+                        "name": "type_app",
+                        "type": "text",
+                        "label": "",
+                        "default": "",
+                        "required": true,
+                        "multiline": false
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150,
+                    "name": "APP"
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 4,
+                            "module": "whatsapp-business-cloud:getMedia",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 4290657
+                            },
+                            "filter": {
+                                "name": "WHATSAPP",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.type_app}}",
+                                            "b": "whatsapp",
+                                            "o": "text:equal"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "mediaId": "{{1.messages[].image.id}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": 0,
+                                    "name": "DESCARGAR IMAGEN"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "whatsapp-business-cloud2"
+                                            },
+                                            "label": "WhatsApp Business Cloud Connection (Admin)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:whatsapp-business-cloud2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "mediaId",
+                                        "type": "text",
+                                        "label": "Media ID",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "module": "image:Convert",
+                            "version": 2,
+                            "parameters": {},
+                            "mapper": {
+                                "data": "{{4.mediaData}}",
+                                "format": "png",
+                                "fileName": "{{4.mediaName}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 0,
+                                    "name": "FORMATEAR IMAGEN"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "format": {
+                                            "label": "PNG"
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "fileName",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    },
+                                    {
+                                        "name": "format",
+                                        "type": "select",
+                                        "label": "Output format",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "png",
+                                                "jpg",
+                                                "gif",
+                                                "bmp"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "module": "openai-gpt-3:analyzeImages",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 4264660
+                            },
+                            "mapper": {
+                                "model": "o4-mini-2025-04-16",
+                                "top_p": "1",
+                                "images": [
+                                    {
+                                        "imageFileData": "{{5.data}}",
+                                        "imageUploadType": "imageFile"
+                                    }
+                                ],
+                                "prompt": "Analiza cuidadosamente la imagen proporcionada. Tu tarea es describir de manera clara, natural y humana lo que la imagen muestra, como si fueras la propia persona explicando.\r\n\r\nEl objetivo es generar un mensaje en primera persona que sirva como base para que un asistente virtual pueda entender y responder adecuadamente.\r\n\r\nTen en cuenta los siguientes puntos al generar el texto:\r\n\r\nUsa un lenguaje sencillo y directo.\r\n\r\nSi hay errores, notificaciones o mensajes visibles, descríbelos como si los estuviera reportando el usuario.\r\n\r\nSi es una verificación de identidad, indícalo como codigo de verificacion o simplemente codigo en el texto.\r\n\r\nNo exageres ni inventes información que no esté presente.\r\n\r\nSi hay datos sensibles, simplemente los omite, ignorar.\r\n\r\nDevuelve solo el texto que la persona podría haber escrito, en un párrafo corto, sin ninguna explicación adicional.",
+                                "max_tokens": "2048",
+                                "temperature": "1",
+                                "n_completions": "1"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 0,
+                                    "name": "ANALIZAR"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "o4-mini-2025-04-16 (system)"
+                                        },
+                                        "images": {
+                                            "mode": "chose",
+                                            "items": [
+                                                {
+                                                    "imageUploadType": {
+                                                        "mode": "chose",
+                                                        "label": "Image File"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            },
+                                            "label": "My OpenAI connection"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Prompt",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "images",
+                                        "spec": {
+                                            "name": "value",
+                                            "spec": [
+                                                {
+                                                    "name": "imageUploadType",
+                                                    "type": "select",
+                                                    "label": "How would you like to specify an image?",
+                                                    "options": [
+                                                        {
+                                                            "label": "Image URL",
+                                                            "value": "url",
+                                                            "nested": [
+                                                                {
+                                                                    "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`.",
+                                                                    "mode": "edit",
+                                                                    "name": "imageUrl",
+                                                                    "type": "url",
+                                                                    "label": "Image URL",
+                                                                    "mappable": {
+                                                                        "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`."
+                                                                    },
+                                                                    "required": true
+                                                                }
+                                                            ],
+                                                            "default": true
+                                                        },
+                                                        {
+                                                            "label": "Image File",
+                                                            "value": "imageFile",
+                                                            "nested": [
+                                                                {
+                                                                    "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the __HTTP: Get a file__ module.",
+                                                                    "name": "imageFileData",
+                                                                    "type": "buffer",
+                                                                    "label": "Image File",
+                                                                    "required": true,
+                                                                    "semantic": "file:data"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "required": true
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": "Image"
+                                        },
+                                        "type": "array",
+                                        "label": "Images",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "max_tokens",
+                                        "type": "uinteger",
+                                        "label": "Max Completion Tokens"
+                                    },
+                                    {
+                                        "name": "temperature",
+                                        "type": "number",
+                                        "label": "Temperature",
+                                        "validate": {
+                                            "max": 2,
+                                            "min": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "top_p",
+                                        "type": "number",
+                                        "label": "Top P",
+                                        "validate": {
+                                            "max": 1,
+                                            "min": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "n_completions",
+                                        "type": "number",
+                                        "label": "Number"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "module": "datastore:GetRecord",
+                            "version": 1,
+                            "parameters": {
+                                "datastore": 36975
+                            },
+                            "mapper": {
+                                "key": "{{1.id}}",
+                                "returnWrapped": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 0,
+                                    "name": "TRAER MENSAJES"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "datastore": {
+                                            "label": "MENSAJES TEMPORALES"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "datastore",
+                                        "type": "datastore",
+                                        "label": "Data store",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "key",
+                                        "type": "text",
+                                        "label": "Key",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "returnWrapped",
+                                        "type": "boolean",
+                                        "label": "Return Wrapped Output",
+                                        "required": true
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "help": "",
+                                        "name": "mensaje",
+                                        "type": "text",
+                                        "label": null,
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 8,
+                            "module": "datastore:AddRecord",
+                            "version": 1,
+                            "parameters": {
+                                "datastore": 36975
+                            },
+                            "mapper": {
+                                "key": "{{1.id}}",
+                                "data": {
+                                    "mensaje": "{{if(7.mensaje != null; 7.mensaje + \",\" + 6.result; 6.result)}}"
+                                },
+                                "overwrite": true
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1800,
+                                    "y": 0,
+                                    "name": "ALMACENAR MENSAJES"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "overwrite": {
+                                            "mode": "chose"
+                                        }
+                                    },
+                                    "parameters": {
+                                        "datastore": {
+                                            "label": "MENSAJES TEMPORALES"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "datastore",
+                                        "type": "datastore",
+                                        "label": "Data store",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "key",
+                                        "type": "text",
+                                        "label": "Key"
+                                    },
+                                    {
+                                        "name": "overwrite",
+                                        "type": "boolean",
+                                        "label": "Overwrite an existing record",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "data",
+                                        "spec": [
+                                            {
+                                                "name": "mensaje",
+                                                "type": "text",
+                                                "label": null
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Record"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": null,
+                            "module": "placeholder:Placeholder",
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": 300
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    },
+    "io": {
+        "input_spec": [
+            {
+                "help": "",
+                "name": "id",
+                "type": "number",
+                "label": "",
+                "default": null,
+                "required": true
+            },
+            {
+                "help": "",
+                "name": "imagen_media_id",
+                "type": "text",
+                "label": "",
+                "default": "",
+                "required": true,
+                "multiline": false
+            },
+            {
+                "help": "",
+                "name": "type_app",
+                "type": "text",
+                "label": "",
+                "default": "",
+                "required": true,
+                "multiline": false
+            }
+        ],
+        "output_spec": []
+    }
+}

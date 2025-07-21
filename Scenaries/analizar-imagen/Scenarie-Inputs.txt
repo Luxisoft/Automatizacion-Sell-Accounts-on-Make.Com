@@ -1,0 +1,5 @@
+Add scenario inputs
+
+- id [number] [required]
+- imagen_media_id [text] [required]
+- type_app [text] [required]

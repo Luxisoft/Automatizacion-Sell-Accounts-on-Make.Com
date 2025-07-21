@@ -1,0 +1,570 @@
+{
+  "luxisoft": {
+    "chatgpt": {
+      "prueba": {
+        "cuenta_a": {
+          "clave": "adsDdGz213dd",
+          "email": "jwmg10@hotmail.com",
+          "estado": "false",
+          "usuarios": "60"
+        },
+        "cuenta_b": {
+          "clave": "dBhdQ223Df&5",
+          "email": "jwmg11@outlook.com",
+          "estado": "false",
+          "usuarios": "60"
+        },
+        "cuenta_c": {
+          "clave": "SddF&d34FbbFd&",
+          "email": "jwmg10@outlook.com",
+          "estado": "false",
+          "usuarios": "60"
+        },
+        "cuenta_d": {
+          "clave": "6%w+3tPn$XBuz/.",
+          "email": "jwmg12@outlook.com",
+          "estado": "true",
+          "usuarios": "53"
+        }
+      },
+      "real": {
+        "cuenta_a": {
+          "clave": "adsDdGz213dd",
+          "email": "jwmg10@hotmail.com",
+          "estado": true,
+          "usuarios": 0
+        },
+        "cuenta_b": {
+          "clave": "dBhdQ223Df&5",
+          "email": "jwmg11@outlook.com",
+          "estado": false,
+          "usuarios": 0
+        },
+        "cuenta_c": {
+          "clave": "SddF&d34FbbFd&",
+          "email": "jwmg10@outlook.com",
+          "estado": false,
+          "usuarios": 0
+        },
+        "cuenta_d": {
+          "clave": "6%w+3tPn$XBuz/.",
+          "email": "jwmg12@outlook.com",
+          "estado": false,
+          "usuarios": 0
+        }
+      }
+    },
+    "invoices": {
+      "consecutive": 20,
+      "test_0AcD0R_1752635328_SBr2qVIbx": {
+        "created_at": "2025-07-16T03:09:17.718Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T03:09:18.122Z",
+        "full_name": "José Marin",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752635357-10744"
+      },
+      "test_0AcD0R_1752636374_OqoTzxTz0": {
+        "created_at": "2025-07-16T03:27:00.837Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T03:27:02.088Z",
+        "full_name": "José Marin",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752636420-94882"
+      },
+      "test_0AcD0R_1752643388_UDpIUZMhi": {
+        "created_at": "2025-07-16T05:23:44.366Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:23:44.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "BANCOLOMBIA_COLLECT",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643424-13159"
+      },
+      "test_0AcD0R_1752643480_LSuF8nXUp": {
+        "created_at": "2025-07-16T05:25:03.152Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:25:03.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "BANCOLOMBIA_COLLECT",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643503-33499"
+      },
+      "test_0AcD0R_1752643592_OEGP68jfW": {
+        "created_at": "2025-07-16T05:27:04.115Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:27:04.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643623-90715"
+      },
+      "test_0AcD0R_1752643703_vYkonYi1M": {
+        "created_at": "2025-07-16T05:29:06.064Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:29:07.732Z",
+        "full_name": "jose m",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "PSE",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643745-10124"
+      },
+      "test_0AcD0R_1752643897_ZgwFQNJni": {
+        "created_at": "2025-07-16T05:33:36.214Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:33:40.840Z",
+        "full_name": "jose m",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "CARD",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752644014-97558"
+      },
+      "test_0AcD0R_1752711812_J5TZtJC0e": {
+        "created_at": "2025-07-17T00:24:15.228Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-17T00:24:18.295Z",
+        "full_name": "José marin",
+        "payment_link": "test_0AcD0R",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752711855-86554"
+      },
+      "test_9bLRT6_1752555197_BOnbY33k7": {
+        "created_at": "2025-07-15T04:53:51.131Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-15T04:53:52.375Z",
+        "full_name": "JOSE MARIN",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752555231-61900"
+      },
+      "test_9bLRT6_1752555893_K06vaO7fA": {
+        "created_at": "2025-07-15T05:05:17.664Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-15T05:05:20.684Z",
+        "full_name": "JOSE MARIN",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752555917-30358"
+      },
+      "test_9bLRT6_1752561287_lOCc9tt9D": {
+        "created_at": "2025-07-15T06:35:32.354Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-15T06:35:34.622Z",
+        "full_name": "jose marin",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752561332-99863"
+      },
+      "test_9bLRT6_1752561591_L7GP45i4y": {
+        "created_at": "2025-07-15T06:40:12.461Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-15T06:40:13.728Z",
+        "full_name": "jose m",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752561612-22230"
+      },
+      "test_9bLRT6_1752561719_DFdI9fPUt": {
+        "created_at": "2025-07-15T06:42:23.209Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-15T06:42:26.071Z",
+        "full_name": "jose m",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752561743-85680"
+      },
+      "test_9bLRT6_1752629809_AcDO9eSzK": {
+        "created_at": "2025-07-16T01:37:34.294Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T01:37:35.611Z",
+        "full_name": "José Wilson",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752629854-24370"
+      },
+      "test_9bLRT6_1752630582_TonJCMhD3": {
+        "created_at": "2025-07-16T01:51:24.061Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T01:51:25.899Z",
+        "full_name": "José Marin",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752630683-84167"
+      },
+      "test_9bLRT6_1752631338_2IiEOdtf4": {
+        "created_at": "2025-07-16T02:03:01.297Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T02:03:05.804Z",
+        "full_name": "José Marin",
+        "payment_link": "test_9bLRT6",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752631381-35096"
+      },
+      "test_FXOIhE_1752636751_920e9Vodi": {
+        "created_at": "2025-07-16T03:32:58.911Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T03:32:59.687Z",
+        "full_name": "José Marin",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752636778-11535"
+      },
+      "test_FXOIhE_1752638992_Y17Ovp58D": {
+        "created_at": "2025-07-16T04:10:26.373Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T04:10:31.639Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752639026-85524"
+      },
+      "test_FXOIhE_1752639224_dS8miaQGm": {
+        "created_at": "2025-07-16T04:14:51.454Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T04:14:52.070Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752639291-80612"
+      },
+      "test_FXOIhE_1752639355_ICLoh4hcy": {
+        "created_at": "2025-07-16T04:16:23.252Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T04:16:27.216Z",
+        "full_name": "jose marin",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752639383-68285"
+      },
+      "test_FXOIhE_1752639517_1jeSN1AI5": {
+        "created_at": "2025-07-16T04:18:56.716Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T04:18:57.168Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752639536-98247"
+      },
+      "test_FXOIhE_1752641974_HxxLdxBY4": {
+        "created_at": "2025-07-16T04:59:57.069Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T04:59:59.575Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752641996-64621"
+      },
+      "test_FXOIhE_1752642380_lOfI3pheq": {
+        "created_at": "2025-07-16T05:06:38.972Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:06:39.849Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752642398-10763"
+      },
+      "test_FXOIhE_1752642915_hXoWuFatb": {
+        "created_at": "2025-07-16T05:15:58.832Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:16:00.268Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752642958-90370"
+      },
+      "test_FXOIhE_1752643056_iEWDgH1GJ": {
+        "created_at": "2025-07-16T05:19:03.029Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:19:07.849Z",
+        "full_name": "jose m",
+        "payment_link": "test_FXOIhE",
+        "payment_type": "DAVIPLATA",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643142-15422"
+      },
+      "test_IPtshA_1752717575_cj82dS1mx": {
+        "created_at": "2025-07-17T02:04:26.469Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-17T02:04:26.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_IPtshA",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752717866-25847"
+      },
+      "test_IPtshA_1752717920_VVaKkQzJP": {
+        "created_at": "2025-07-17T02:05:56.693Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-17T02:05:56.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_IPtshA",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752717956-25873"
+      },
+      "test_IPtshA_1752718771_Q3ssLkruu": {
+        "created_at": "2025-07-17T02:20:05.360Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-17T02:20:06.163Z",
+        "full_name": "José narin",
+        "payment_link": "test_IPtshA",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752718805-19739"
+      },
+      "test_IPtshA_1752718994_HU4xX9lSf": {
+        "created_at": "2025-07-17T02:23:45.740Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-17T02:23:45.000Z",
+        "full_name": "JOSE WILSON MARIN GIRALDO",
+        "payment_link": "test_IPtshA",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752719025-82463"
+      },
+      "test_IPtshA_1752719044_7P5EmlyeC": {
+        "created_at": "2025-07-17T02:24:40.162Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-17T02:24:47.013Z",
+        "full_name": "JOSE WILSON MARIN GIRALDO",
+        "payment_link": "test_IPtshA",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752719080-25905"
+      },
+      "test_IPtshA_1752721166_FX543tyKK": {
+        "created_at": "2025-07-17T03:00:04.087Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-17T03:00:04.000Z",
+        "full_name": "JOSE WILSON MARIN GIRALDO",
+        "payment_link": "test_IPtshA",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752721203-70459"
+      },
+      "test_qOm9YL_1752634782_EEQ9QZ3uI": {
+        "created_at": "2025-07-16T03:00:14.602Z",
+        "currency": "COP",
+        "email": "jose.dev.web@gmail.com",
+        "finalized_at": "2025-07-16T03:00:19.205Z",
+        "full_name": "José Marin",
+        "payment_link": "test_qOm9YL",
+        "payment_type": "NEQUI",
+        "phone": "+573019289464",
+        "phone_payment": "3991111111",
+        "status": "APPROVED",
+        "transaction": "11346187-1752634814-72290"
+      },
+      "test_qOm9YL_1752643791_KLja9tRiL": {
+        "created_at": "2025-07-16T05:30:31.735Z",
+        "currency": "COP",
+        "email": "dev.luxisoft@gmail.com",
+        "finalized_at": "2025-07-16T05:30:31.000Z",
+        "full_name": "jose m",
+        "payment_link": "test_qOm9YL",
+        "payment_type": "BANCOLOMBIA_QR",
+        "phone": "+573019289464",
+        "phone_payment": "",
+        "status": "APPROVED",
+        "transaction": "11346187-1752643831-79491"
+      }
+    },
+    "users": {
+      "16465894168": {
+        "action": {
+          "sabicash": {
+            "date": {
+              "last_game": "2025-07-18T13:30:47.512Z",
+              "last_tokens": "2025-07-18T13:30:47.512Z"
+            },
+            "game_answers": "0",
+            "game_gpt": {
+              "threadID_information": "thread_8wsLUJhtnJ2UpnVjbakPeKpt"
+            },
+            "game_number": "1",
+            "game_points": "0",
+            "game_questions": "0",
+            "game_request": "chat",
+            "game_tokens": "10"
+          }
+        }
+      },
+      "573019289464": {
+        "action": {
+          "sabicash": {
+            "date": {
+              "last_game": "2025-07-18T06:33:43.517Z",
+              "last_tokens": "2025-07-18T06:33:43.517Z"
+            },
+            "game_answers": "0",
+            "game_gpt": {
+              "threadID_information": "thread_efCfCypIhinCUBH93b9vVYKi"
+            },
+            "game_number": "1",
+            "game_points": "0",
+            "game_questions": "0",
+            "game_request": "chat",
+            "game_tokens": "10"
+          }
+        },
+        "blocked": false,
+        "email": "test@test.com",
+        "name": "LUXISOFT",
+        "payment_method": {
+          "cards": {
+            "8413b8234f510cb350e37c3": {
+              "card": {
+                "exp_month": "12",
+                "exp_year": "2025",
+                "mask": "457562******0326",
+                "name": "visa"
+              },
+              "data": {
+                "created": "06/05/2025",
+                "id": "8413b8234f510cb350e37c3",
+                "livemode": false,
+                "status": "exitoso"
+              },
+              "id": "8413b8234f510cb350e37c3",
+              "object": "token",
+              "status": true,
+              "success": true,
+              "type": "card"
+            }
+          }
+        },
+        "subscriptions": {
+          "chatgpt": {
+            "code_plan": "test_0AcD0R",
+            "end_date": "2026-01-17T00:24:18.295Z",
+            "plan_type": "cuenta_d",
+            "start_date": "2025-07-17T00:24:18.295Z",
+            "total_tokens": "2"
+          },
+          "luxichat": {
+            "end_date": "2025-07-11",
+            "plan_type": "basico",
+            "start_date": "2025-07-10"
+          }
+        }
+      }
+    }
+  }
+}

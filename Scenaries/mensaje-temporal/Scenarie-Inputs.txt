@@ -1,0 +1,4 @@
+Add scenario inputs
+
+- id [number] [required]
+- messages [text] [required]
